@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout {
+  width: 100%;
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: var(--layout-padding-top);
+  padding-bottom: 0;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 0px);
+  background-color: var(--layout-bg-color);
+}
+
+.mainContents {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-btn {
+  height: 58px;
+  font-size: 18px;
+}
