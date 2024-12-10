@@ -1,11 +1,9 @@
-import { atom } from 'recoil';
-import { IToast } from '@/src/shared/UIKit/organisms/Toast/model/model';
+import { atom } from 'recoil'
+import { IToast } from '@/shared/uiKit/organisms/Toast/model/model'
 
 export const toastState = atom<IToast[]>({
-  key: 'toastState',
-  default: [],
-});
+	key: 'toastState',
+	default: [],
+})
 
-export default {};
-
-// Harmflmedia
+export default {}

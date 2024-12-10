@@ -9,7 +9,7 @@ import { ConditionalWrapper } from '@/shared/uiKit/atom/ConditionalWrapper'
 import Portal from '@/shared/uiKit/atom/Portal'
 import Dim from '@/shared/uiKit/atom/Dim'
 import { IS_NODE } from '@/shared/constant/globalConstants'
-import useConfirm from '@/shared/uiKit/organisms/Confirm/lib/hooks/useConfirm'
+import useConfirm from '@/shared/uiKit/organisms/Confirm/lib/useConfirm'
 
 const cn = classNames.bind(st)
 
