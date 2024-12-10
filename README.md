@@ -37,22 +37,14 @@ Next.js 프로젝트 생성
 ### 프로젝트 세팅
 
 1. 노드 버전 관리
-    - Volta
+    - volta
     - https://volta.sh/ 설치
     - 설치 후 volta list로 버전확인
         - 로컬 node -v 버전확인 필요
 
 2.config.js/.env.example 파일 복사 하여 .env.local 파일 생성
 
-3.husky 설치 1회 필요
-
-```bash  
-  pnpm prepare
-```
-
-4. https://mockoon.com/download/ 설치
-
-5.
+3.mockoon 설치 https://mockoon.com/download/ 설치
 
 ### Getting Started
 
