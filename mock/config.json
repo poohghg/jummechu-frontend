@@ -1,0 +1,195 @@
+{
+  "uuid": "ce49848d-449b-4c9b-a565-0a6942785d1e",
+  "lastMigration": 33,
+  "name": "jummechu",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "e1305b90-255c-47ac-9976-4c5860ddec54",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/links",
+      "responses": [
+        {
+          "uuid": "ea27d40b-882a-4ebc-8504-e56e1af21b94",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./json/links.json",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b1c3e055-e05d-4c2c-bf42-8a10d4772895",
+          "body": "{\n  \"code\": 4000002,\n  \"msg\": \"유효하지 않은  채널\"\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": [],
+          "rules": []
+        },
+        {
+          "uuid": "d67814ff-5d0c-4012-8377-b54c938c1200",
+          "body": "{\n  \"code\": 4000002\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "334ff9bb-8d6e-4dde-a64e-2014e3cc7429",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "test",
+      "responses": [
+        {
+          "uuid": "558d979c-a846-4214-a1c7-be9190bf1082",
+          "body": "{\n  query:gg\n  name:string\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "ef2aa7c3-7c4e-4342-b9ce-abacd074154c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "e1305b90-255c-47ac-9976-4c5860ddec54"
+    },
+    {
+      "type": "route",
+      "uuid": "334ff9bb-8d6e-4dde-a64e-2014e3cc7429"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With,Mrblue-Channel"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "24efa17c-b6dd-4726-bf67-33e020625289",
+      "id": "qzsv",
+      "name": "New data",
+      "documentation": "",
+      "value": "test:{\n  a:1\n  b:2\n}"
+    }
+  ],
+  "callbacks": []
+}
