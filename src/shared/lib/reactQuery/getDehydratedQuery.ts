@@ -1,14 +1,9 @@
-import { cache } from 'react'
-import {
-	dehydrate,
-	FetchQueryOptions,
-	QueryClient,
-	QueryFunction,
-	QueryKey,
-} from '@tanstack/react-query'
+import {dehydrate, FetchQueryOptions, QueryClient, QueryFunction, QueryKey,} from '@tanstack/react-query'
 import isEqual from 'lodash/isEqual'
 
-const getQueryClient = cache(() => new QueryClient())
+// const getQueryClient = React.cache(() => new QueryClient())
+
+const getQueryClient = () => new QueryClient()
 
 function findDehydratedQuery(key: QueryKey) {
 	const queryClient = getQueryClient()
