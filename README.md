@@ -44,13 +44,15 @@ Next.js 프로젝트 생성
 
 2.config.js/.env.example 파일 복사 하여 .env.local 파일 생성
 
-3.husky 설치
-
-4. https://mockoon.com/download/ 설치
+3.husky 설치 1회 필요
 
 ```bash  
   pnpm prepare
 ```
+
+4. https://mockoon.com/download/ 설치
+
+5.
 
 ### Getting Started
 
