@@ -3,4 +3,4 @@
 
 echo "Running pre-commit Hook"
 
-npx lint-staged
+pnpm lint-staged
