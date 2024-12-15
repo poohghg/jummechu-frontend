@@ -3,45 +3,161 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #000000;
 }
+$primary: #ff8107;
+$borderColor: #ddd;
+$gray: #e6e6e6;
+$white: #fff;
+$activeBg: #ffe9d4;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+	font-family: 'Paperlogy-8ExtraBold';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: 'Paperlogy-8ExtraBold', Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+button.btn {
+	width: 100%;
+	height: 58px;
+	background-color: $gray;
+	color: $white;
+	font-weight: 500;
+	font-size: 18px;
+	border-radius: 12px;
+	border: none;
+	&.bottom {
+		position: absolute;
+		bottom: 30px;
+	}
+	&.active {
+		background-color: $primary;
+	}
+}
+
+/* 커스텀 체크박스 */
+.customCheckbox {
+	width: 24px;
+	height: 24px;
+	position: relative;
+
+	input[type='checkbox'] {
+		display: none; // 기본 체크박스 숨기기
+	}
+	label {
+		display: flex;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-image: url('../images/checkbox1.svg');
+		cursor: pointer;
+	}
+	label.checked {
+		background-image: url('../images/checkbox2.svg');
+	}
 }
 
 .layout {
-  width: 100%;
-  min-width: 320px;
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding-top: var(--layout-padding-top);
-  padding-bottom: 0;
-  padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 0px);
-  background-color: var(--layout-bg-color);
+	width: 100%;
+	height: 100vh;
+	min-width: 320px;
+	max-width: 500px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: var(--layout-padding);
+	padding-bottom: 0;
+	// padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
+	// padding-bottom: calc(constant(safe-area-inset-bottom) + 0px);
+	background-color: var(--layout-bg-color);
 }
 
 .mainContents {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .login-btn {
-  height: 58px;
-  font-size: 18px;
+	width: 100%;
+	border-radius: 12px;
+	background-color: #fee500;
+	height: 58px;
+	font-size: 18px;
+	overflow: hidden;
+	img {
+		width: 335px;
+		height: 58px;
+	}
+}
+
+.nav {
+	display: flex;
+	height: 26px;
+	.logo {
+		margin-left: 35%;
+	}
+}
+
+.processContainer {
+	height: 32px;
+	position: relative;
+	margin-top: 14px;
+	.processIcon {
+		position: absolute;
+		z-index: 2;
+		top: 2px;
+	}
+	.process {
+		position: absolute;
+		top: 13px;
+		width: 100%;
+		border: 2.5px solid #e6e6e6;
+		border-radius: 10px;
+	}
+}
+.testCheckBox {
+	margin-top: 12px;
+	border: 1px solid $borderColor;
+	border-radius: 20px;
+	padding: 24px 0;
+	text-align: center;
+	position: relative;
+	&.active {
+		background-color: $activeBg;
+	}
+	.customCheckbox {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+	}
+	p {
+		font-size: 20px;
+		span {
+			color: $primary;
+		}
+	}
+	img {
+		margin: 20px auto 0;
+		&.img-full {
+			width: 100%;
+			height: auto;
+		}
+	}
 }

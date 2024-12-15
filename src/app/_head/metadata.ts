@@ -25,7 +25,7 @@ export default function genMetadata(
 		keywords,
 		formatDetection: { telephone: false },
 		applicationName: '',
-		manifest: '/resources/manifest.json',
+		// manifest: '/resources/manifest.json',
 		icons: [
 			{
 				rel: 'icon',
